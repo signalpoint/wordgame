@@ -104,6 +104,10 @@ function wordgame_load_new_word() {
   
   // Grab a random word from the Drupal site translated view JSON page:
   //   http://language.tylerfrankenstein.com/vi/random-word
+  //
+  //   Note: the 'vi' is the language code for Vietnamese. Replace it
+  //         with the language code for the language you would like to
+  //        learn.
   drupalgap.views_datasource.call({
       path:'vi/random-word',
       success:function(data){
