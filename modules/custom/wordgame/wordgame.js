@@ -1,3 +1,9 @@
+var wordgame = {
+  settings:{
+    case_sensitive:false
+  }
+};
+
 var wordgame_answer = ''; // Holds the current answer.
 
 /**
@@ -80,7 +86,7 @@ function wordgame_word_form() {
  */
 function wordgame_word_form_validate(form, form_state) {
   // If the translation wasn't correct, set the form error.
-  if (wordgame_answer != form_state.values.translation) {
+  if (wordgame_answer.toLowerCase() != form_state.values.translation.toLowerCase()) {
     drupalgap_form_set_error('translation', 'Sorry, that is not correct!');
   }
 }
