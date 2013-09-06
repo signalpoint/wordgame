@@ -63,20 +63,15 @@ function wordgame_play_pageshow() {
 /**
  * The player input form.
  */
-function wordgame_word_form() {
-  var form = {
-    'id':'wordgame_word_form',
-    'elements':{
-      'translation':{
-        'type':'textfield',
-        'title':'Translation',
-        'required':true,
-      },
-      'submit':{
-        'type':'submit',
-        'value':'Check My Answer',
-      },
-    },
+function wordgame_word_form(form, form_state) {
+  form.elements.translation = {
+    type:'textfield',
+    title:'Translation',
+    required:true,
+  };
+  form.elements.submit = {
+    type:'submit',
+    value:'Check My Answer',
   };
   return form;
 }
